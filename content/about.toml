@@ -5,8 +5,8 @@ title = "About"
 research_interests = [
   "Computational Neuroscience",
   "Machine Learning / Deep Learning",
-  "Brain Computer Interface"
-  "Coffee Science"
+  "Brain Computer Interface",
+  "Coffee Science",
 ]
 
 [[sections]]

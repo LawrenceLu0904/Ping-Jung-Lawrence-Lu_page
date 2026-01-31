@@ -1,20 +1,20 @@
 [site]
-title = "Jiale Liu"
-description = "PhD student at the University of Example."
+title = "Ping-Jung(Lawrence) Lu"
+description = "Master Student at NYU Electrical and Computer Engineering"
 favicon = "/favicon.svg"
-last_updated = "November 18, 2025"
+last_updated = "December 31, 2026"
 
 [author]
-name = "Jiale Liu"
-title = "PhD Student"
-institution = "University of Example"
-avatar = "/bio.jpg"
+name = "Ping-Jung(Lawrence) Lu"
+title = "Master Student"
+institution = "New York University"
+avatar = "/public/lawrence.JPG"
 
 [social]
 # Contact information (leave blank or delete to hide)
 
-email = "john.doe@example.com"
-location = "City, Country"
+email = "pl2820@nyu.edu"
+location = "New York City, New York"
 location_url = "https://maps.google.com"
 location_details = [
   "Room 123, Science Building,",
@@ -22,8 +22,8 @@ location_details = [
 ]
 google_scholar = "https://scholar.google.com"
 orcid = "https://orcid.org"
-github = "https://github.com"
-linkedin = "https://linkedin.com"
+github = "https://github.com/LawrenceLu0904"
+linkedin = "https://www.linkedin.com/in/ping-jung-lu-9a6387239/"
 
 [features]
 # Show a like button on the about page

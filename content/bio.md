@@ -1,5 +1,3 @@
-I am a PhD student at the School of Science, University of Example, advised by [Prof. Advisor One](https://example.com) and [Dr. Advisor Two](https://example.com).
+I am currently a Master student at NYU ECE department, advised by [Prof. Erdem Varol](https://example.com) and [Prof. Chinmay Hegde](https://example.com).
 
-Prior to this, I obtained a BSc degree with First Class Honours in Natural Science from the University of Example.
-
-My current research focuses on investigating the mathematical principles of natural philosophy.
+My research focuses on multimodal foundation modeling, including translation from electrophysiological to hemodynamic signals (EEG to fMRI), speech and music reconstruction from neural decoding, and cross-species multimodal neural signal alignment to uncover shared neural representations.

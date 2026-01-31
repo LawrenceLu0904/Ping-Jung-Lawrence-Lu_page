@@ -4,4 +4,4 @@ My research focuses on multimodal foundation modeling for neural signals, with a
 
 My research interests include neural decoding, brain–language representation learning, multimodal foundation models for neuroscience, and cross-species multimodal neural signal alignment. I have also worked on translating electrophysiological signals to hemodynamic signals (EEG to fMRI), as well as speech and music reconstruction from neural activity.
 
-Broadly, my goal is to bridge non-invasive neural signals with language and behavior through machine learning.
+Broadly, my goal is to connect neural activity to language and behavior through machine learning.

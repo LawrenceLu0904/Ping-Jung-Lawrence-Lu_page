@@ -116,14 +116,14 @@ export default function Profile({ author, social, features, researchInterests }:
                     alt={author.name}
                     width={256}
                     height={256}
-                    className="w-full h-full object-cover object-[32%_center]"
+                    className="w-full h-full object-cover object-center"
                     priority
                 />
             </div>
 
             {/* Name and Title */}
             <div className="text-center mb-6">
-                <h1 className="text-3xl font-serif font-bold text-primary mb-2">
+                <h1 className="text-2xl font-serif font-bold text-primary mb-2 text-balance">
                     {author.name}
                 </h1>
                 <p className="text-lg text-accent font-medium mb-1">

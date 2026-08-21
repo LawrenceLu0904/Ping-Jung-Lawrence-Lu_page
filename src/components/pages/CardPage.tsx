@@ -53,6 +53,17 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                                 ))}
                             </div>
                         )}
+                        {item.link && (
+                            <a
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 text-sm text-accent font-medium hover:underline mt-4"
+                            >
+                                Course page
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        )}
                     </motion.div>
                 ))}
             </div>

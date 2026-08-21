@@ -42,3 +42,6 @@ next-env.d.ts
 
 # wrangler
 .wrangler
+
+# private / unpublished work (e.g. papers under double-blind review)
+work/

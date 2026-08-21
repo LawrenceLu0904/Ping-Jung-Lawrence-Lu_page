@@ -3,9 +3,10 @@ title = "About"
 
 [profile]
 research_interests = [
+  "Self-Supervised & Foundation Models for Neural Signals",
+  "Neural Representation Learning & Decoding",
+  "Neuro-genomics for Medicine & Drug Discovery",
   "Computational Neuroscience",
-  "Machine Learning / Deep Learning",
-  "Brain Computer Interface",
   "Coffee Science",
 ]
 

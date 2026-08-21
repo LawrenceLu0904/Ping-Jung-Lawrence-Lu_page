@@ -3,8 +3,9 @@ title = "Teaching"
 description = "Courses I have taught or assisted with."
 
 [[items]]
-title = "Example Course"
+title = "Neuroinformatics (CS-GY 9223 / CS-UY 3943)"
 subtitle = "Teaching Assistant"
-date = "2024"
-content = "Description of the course and responsibilities."
-tags = ["Undergraduate", "CS"]
+date = "Spring 2026"
+content = "New York University, Tandon School of Engineering. Graduate-level course on machine learning and computer vision for neuroscience, taught by Prof. Erdem Varol. Hosted the course Kaggle competition, built Google Colab labs, and held weekly office hours."
+tags = ["NYU Tandon", "Graduate", "Machine Learning"]
+link = "https://www.neuroinformaticslab.com/neuroinformatics-cs-gy-9223-spring26"

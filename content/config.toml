@@ -1,6 +1,6 @@
 [site]
 title = "Ping-Jung(Lawrence) Lu"
-description = "Master Student at NYU Electrical and Computer Engineering"
+description = "Research Assistant at the Neuroinformatics Lab, NYU VIDA"
 favicon = "/favicon.svg"
 last_updated = "December 31, 2026"
 
@@ -8,7 +8,7 @@ last_updated = "December 31, 2026"
 name = "Ping-Jung(Lawrence) Lu"
 title = "Research Assistant"
 institution = "New York University"
-avatar = "/lawrence.JPG"
+avatar = "/Lawrence.jpeg"
 
 [social]
 # Contact information (leave blank or delete to hide)
@@ -57,10 +57,10 @@ target = "awards"
 href = "/awards"
 
 [[navigation]]
-title = "Services"
-type = "page"
-target = "services"
-href = "/services"
+title = "Blog"
+type = "link"
+target = "blog"
+href = "/blog"
 
 [[navigation]]
 title = "CV"

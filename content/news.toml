@@ -1,7 +1,15 @@
 [[news]]
-date = "2025-11"
-content = "Our work has been accepted by a prestigious journal 🎉"
+date = "Jul 2026"
+content = "Started as a Research Assistant at the Neuroinformatics Lab (NYU VIDA)."
 
 [[news]]
-date = "2025-09"
-content = "Starting my PhD at the University of Example"
+date = "May 2026"
+content = "Graduated with my M.S. in Electrical & Computer Engineering from NYU 🎓"
+
+[[news]]
+date = "Mar 2026"
+content = "Our work on decoding anatomical structure from neural activity was presented at Cosyne 2026 in Lisbon 🇵🇹"
+
+[[news]]
+date = "Jan 2026"
+content = "Began serving as a Teaching Assistant for Neuroinformatics (CS-GY 9223) at NYU Tandon."

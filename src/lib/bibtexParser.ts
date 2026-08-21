@@ -84,13 +84,14 @@ export function parseBibTeX(bibtexContent: string): Publication[] {
       doi: tags.doi,
       url: tags.url,
       code: tags.code,
+      pdfUrl: tags.poster || tags.pdf,
       abstract: cleanBibTeXString(tags.abstract),
       description: cleanBibTeXString(tags.description || tags.note),
       selected,
       preview,
 
       // Store original BibTeX (excluding custom fields)
-      bibtex: reconstructBibTeX(entry, ['selected', 'preview', 'description', 'keywords', 'code']),
+      bibtex: reconstructBibTeX(entry, ['selected', 'preview', 'description', 'keywords', 'code', 'poster', 'pdf']),
     };
 
     // Clean up undefined fields

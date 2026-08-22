@@ -7,7 +7,9 @@ import {
     EnvelopeIcon,
     AcademicCapIcon,
     HeartIcon,
-    MapPinIcon
+    MapPinIcon,
+    ChevronLeftIcon,
+    ChevronRightIcon
 } from '@heroicons/react/24/outline';
 import { MapPinIcon as MapPinSolidIcon, EnvelopeIcon as EnvelopeSolidIcon } from '@heroicons/react/24/solid';
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
@@ -42,6 +44,20 @@ export default function Profile({ author, social, features, researchInterests }:
     const [showEmail, setShowEmail] = useState(false);
     const [isEmailPinned, setIsEmailPinned] = useState(false);
     const [lastClickedTooltip, setLastClickedTooltip] = useState<'email' | 'address' | null>(null);
+
+    // Profile photos: use the `avatars` list if provided, else the single `avatar`
+    const photos = author.avatars && author.avatars.length > 0 ? author.avatars : [author.avatar];
+    const [photoIndex, setPhotoIndex] = useState(0);
+    const showPhoto = (i: number) => setPhotoIndex((i + photos.length) % photos.length);
+
+    // Auto-advance through photos when more than one is configured
+    useEffect(() => {
+        if (photos.length <= 1) return;
+        const id = setInterval(() => {
+            setPhotoIndex((prev) => (prev + 1) % photos.length);
+        }, 4000);
+        return () => clearInterval(id);
+    }, [photos.length]);
 
     // Check local storage for user's like status
     useEffect(() => {
@@ -109,17 +125,67 @@ export default function Profile({ author, social, features, researchInterests }:
             transition={{ duration: 0.6 }}
             className="sticky top-8"
         >
-            {/* Profile Image */}
-            <div className="w-64 h-64 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105">
-                <Image
-                    src={author.avatar}
-                    alt={author.name}
-                    width={256}
-                    height={256}
-                    className="w-full h-full object-cover object-center"
-                    priority
-                />
+            {/* Profile Image (crossfades between photos if multiple are configured) */}
+            <div className="w-64 h-64 mx-auto mb-3 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 relative">
+                <AnimatePresence>
+                    <motion.div
+                        key={photoIndex}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1 }}
+                        className="absolute inset-0"
+                    >
+                        <Image
+                            src={photos[photoIndex]}
+                            alt={author.name}
+                            width={256}
+                            height={256}
+                            className="w-full h-full object-cover object-center"
+                            priority
+                        />
+                    </motion.div>
+                </AnimatePresence>
+
+                {/* Click the left / right of the photo to switch */}
+                {photos.length > 1 && (
+                    <>
+                        <button
+                            type="button"
+                            onClick={() => showPhoto(photoIndex - 1)}
+                            aria-label="Previous photo"
+                            className="group absolute inset-y-0 left-0 z-10 flex w-1/2 items-center justify-start px-2 focus:outline-none cursor-pointer"
+                        >
+                            <ChevronLeftIcon className="h-6 w-6 text-white opacity-0 drop-shadow-md transition-opacity duration-200 group-hover:opacity-90" />
+                        </button>
+                        <button
+                            type="button"
+                            onClick={() => showPhoto(photoIndex + 1)}
+                            aria-label="Next photo"
+                            className="group absolute inset-y-0 right-0 z-10 flex w-1/2 items-center justify-end px-2 focus:outline-none cursor-pointer"
+                        >
+                            <ChevronRightIcon className="h-6 w-6 text-white opacity-0 drop-shadow-md transition-opacity duration-200 group-hover:opacity-90" />
+                        </button>
+                    </>
+                )}
             </div>
+
+            {/* Photo dots (only when multiple photos) */}
+            {photos.length > 1 && (
+                <div className="flex justify-center gap-1.5 mb-6">
+                    {photos.map((_, i) => (
+                        <button
+                            key={i}
+                            onClick={() => setPhotoIndex(i)}
+                            aria-label={`Show photo ${i + 1}`}
+                            className={`h-1.5 rounded-full transition-all duration-300 ${i === photoIndex
+                                ? 'w-4 bg-accent'
+                                : 'w-1.5 bg-neutral-300 dark:bg-neutral-700 hover:bg-neutral-400'
+                                }`}
+                        />
+                    ))}
+                </div>
+            )}
 
             {/* Name and Title */}
             <div className="text-center mb-6">

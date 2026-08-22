@@ -9,6 +9,7 @@ name = "Ping-Jung(Lawrence) Lu"
 title = "Research Assistant"
 institution = "New York University"
 avatar = "/Lawrence.jpeg"
+avatars = ["/Lawrence.jpeg", "/Lawrence_tennis.jpeg", "/Haaland_meme1.JPG", "/Park_CEO_meme1.JPG"]
 
 [social]
 # Contact information (leave blank or delete to hide)
